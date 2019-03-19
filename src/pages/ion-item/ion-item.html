@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title text-center text-uppercase>
+      Ion-Item 
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+
+
+<ion-content padding>
+  
+   <ion-segment [(ngModel)]="service">
+    <ion-segment-button value="friends">
+      Friends
+    </ion-segment-button>
+    <ion-segment-button value="enemies">
+      Enemies
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="service">
+      <div *ngSwitchCase="'friends'">
+         
+        <form>
+            
+                  <ion-item>
+                      <ion-select placeholder="Select Travel Sector*">
+                          <ion-option value="domestic" selected>Domestic</ion-option>
+                          <ion-option value="international">International</ion-option>
+                      </ion-select>
+                  </ion-item>
+
+                  <ion-item>
+                      <ion-datetime placeholder="Select the date" displayFormat="DDDD MMM D, YYYY"></ion-datetime>
+                  </ion-item>
+
+                  <ion-item>
+                    <ion-input placeholder="Text Input"></ion-input>
+                  </ion-item>
+              
+
+              
+                    <ion-item>
+                        <ion-select placeholder="Select Travel Sector*">
+                            <ion-option value="domestic" selected>Domestic</ion-option>
+                            <ion-option value="international">International</ion-option>
+                        </ion-select>
+                    </ion-item>
+  
+                    <ion-item>
+                        <ion-datetime placeholder="Select the date" displayFormat="DDDD MMM D, YYYY"></ion-datetime>
+                    </ion-item>
+  
+                    <ion-item>
+                      <ion-input placeholder="Text Input"></ion-input>
+                    </ion-item>
+                 
+
+
+                    <ion-item>
+                        <ion-select placeholder="Select Travel Sector*">
+                            <ion-option value="domestic" selected>Domestic</ion-option>
+                            <ion-option value="international">International</ion-option>
+                        </ion-select>
+                    </ion-item>
+  
+                    <ion-item>
+                        <ion-datetime placeholder="Select the date" displayFormat="DDDD MMM D, YYYY"></ion-datetime>
+                    </ion-item>
+  
+                    <ion-item>
+                      <ion-input placeholder="Text Input"></ion-input>
+                    </ion-item>
+                 
+        </form>
+      </div>
+
+      <div *ngSwitchCase="'enemies'">
+          hello
+      </div>
+
+  </div> 
+
+ 
+</ion-content>
