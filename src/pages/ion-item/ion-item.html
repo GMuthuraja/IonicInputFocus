@@ -22,9 +22,9 @@
 
   <div [ngSwitch]="service">
       <div *ngSwitchCase="'friends'">
-         
+      
         <form>
-            
+           
                   <ion-item>
                       <ion-select placeholder="Select Travel Sector*">
                           <ion-option value="domestic" selected>Domestic</ion-option>
@@ -38,6 +38,7 @@
 
                   <ion-item>
                     <ion-input placeholder="Text Input"></ion-input>
+                    <!-- <ion-searchbar></ion-searchbar> -->
                   </ion-item>
               
 
@@ -55,6 +56,7 @@
   
                     <ion-item>
                       <ion-input placeholder="Text Input"></ion-input>
+                      <!-- <ion-searchbar></ion-searchbar> -->
                     </ion-item>
                  
 
@@ -71,10 +73,12 @@
                     </ion-item>
   
                     <ion-item>
-                      <ion-input placeholder="Text Input"></ion-input>
+                      <!-- <ion-input placeholder="Text Input"></ion-input> -->
+                      <ion-searchbar #searchbar class="searchbar" (ionChange)="onFocusField($event)"></ion-searchbar>
                     </ion-item>
-                 
+                
         </form>
+        
       </div>
 
       <div *ngSwitchCase="'enemies'">
